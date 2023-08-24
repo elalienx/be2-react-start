@@ -4,6 +4,7 @@
 
 1. Cleanup files by deleting stuff you don't use.
 1. Rename JavaScript files that are React components from .js to .jsx so we can visually identify them by their blue icon.
+1. 🆕 Use the same name for both the file and the component name.
 1. Have **one function** per .jsx file and make one line export (`export default function Component(){}`)
 1. In React do not work with normal variables **properties** to update infomration on the screen. Utilize **state** instead.
 1. 🆕 React components should be around 50 lines of code. If you have more refactor the render into multiple sub components and extract long methods into separate Javascript files.

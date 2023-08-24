@@ -1,25 +1,3 @@
-/**
- * # React Getting Started
- * ## Rules:
- * 1. Cleanup files (delete stuff you don't use)
- * 2. Rename JavaScript files that are React components from .js to .jsx
- * 3. One function per .jsx file and... make one line export
- * 4. In React do not work with variables to update infomration on the screen. Utilize "state" instead.
- *
- * ## Anatomy of a React .jsx component
- * 1. Node modules: Imports from the node_modules/ folder.
- * 2. Project files: Imports from the src/ folder.
- * 3. Global state: Data that needs to be updated on the browser that exist globally in the project.
- * 4. Local state: Data that needs to be updated on the browser that exist only inside a Functional Component (FC)
- * 5. Properties: Data that does not be updated on the web browser. For internal use only.
- * 6. Methods: The functions inside the Functional Component (FC)
- * 7. Render: The information sent to display on the web browser.
- *
- * Definitions:
- * 1. Event listener: Act uppon an action on a button, formulary, select box, checkbox, etc.
- * 2. State: A fancy term to say to the React framework, that a piece data (variable, components, json, etc) should update the screen.
- */
-
 // 1. Node modules
 import { useState } from "react";
 
@@ -29,7 +7,7 @@ import logo from "./assets/logo.svg";
 // Functionl Component (FC) with 1 line export shorcut
 export default function App() {
   // 3. Global state
-  // pending...
+  // No used in this project
 
   // 4. Local state
   /**
@@ -68,7 +46,7 @@ export default function App() {
   }
 
   function showAlertAdvanced(name) {
-    // String interpolation (Java Formatter)
+    // String interpolation equivalent to Java Formatter.
     alert(`Welcome ${name} to BE2 lectures`);
   }
 
@@ -76,6 +54,8 @@ export default function App() {
   return (
     <div className="App">
       <h1>Welcome to BE2 React Getting Started</h1>
+      {/* Show state or properties on the screen by using {} */}
+      {/* Tip: Put @@ between your {} to debug */}
       <p>Name: @{name}@</p>
       <p>Counter: @{counter}@</p>
       <p>
@@ -85,11 +65,11 @@ export default function App() {
         mollitia repudiandae voluptatum!
       </p>
 
-      {/* Event listener basic: for a function withouth parameters */}
+      {/* Basic event listener: for a function without parameters */}
       <button onClick={increaseCounter}>Increase counter</button>
       <button onClick={showAlertBasic}>Alert basic</button>
 
-      {/* Event listener advanced: for functions with one or more parameters */}
+      {/* Advanced event listener advanced: for functions with one or more parameters */}
       <button onClick={() => showAlertAdvanced("Olga")}>Alert advanced</button>
     </div>
   );

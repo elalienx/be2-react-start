@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# React Getting Started with Eduardo ⚛️🚀🧔🏻‍♂️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Rules
 
-## Available Scripts
+1. Cleanup files by deleting stuff you don't use.
+1. Rename JavaScript files that are React components from .js to .jsx so we can visually identify them by their blue icon.
+1. Have _one function_ per .jsx file and make one line export (`export default function Component(){}`)
+1. In React do not work with normal variables **properties** to update infomration on the screen. Utilize **state** instead.
+1. React components should be around 50 lines of code. If you have more refactor the render into multiple sub components and extract long methods into separate Javascript files. 🆕
 
-In the project directory, you can run:
+## Definitions:
 
-### `npm start`
+1. **Event listener:** To act uppon an user interacting with a button, formulary, checkbox, etc.
+2. **State:** A fancy term to say to the React framework, that a piece data (variable, components, json, etc) should update the screen.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Anatomy of the project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `node_modules/`: Has all the project dependencies.
+- `public/`: Has the index.html file the browser will read once everything is compiled.
+- `build/`: Has the compiled files by mixing the contents from `public/` and `src/`.
+- `src/`: The folder you will use to write your frontend code.
+- `package-lock.json`: A backup of `package.json` with checksums.
+- `package.json`: List all the dependencies and Node commands the project has.
+- `README.md`: This file.
 
-### `npm test`
+## Anatomy of a React .jsx component
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Node modules:** Imports from the `node_modules/` folder.
+1. **Project files:** Imports from the `src/` folder.
+1. **Global state:** Data that needs to be updated on the browser that exist globally in the project.
+1. **Local state:** Data that needs to be updated on the browser that exist only inside a Functional Component (FC)
+1. **Properties:** Data that does not be updated on the web browser. For internal use only.
+1. **Methods:** The functions inside the Functional Component (FC). Use primarily for handling the **events** that ocurred in the render.
+1. **Render:** The information sent to display on the web browser. Equivalent to the View mixed with Controller in the MCV design pattern.

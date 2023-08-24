@@ -12,7 +12,8 @@ export default function App() {
   // Not used in this file
 
   // 4. Local state
-  // Not used in this file
+  const [name, setName] = useState("Eduardo");
+  const [hideCounter, setHideCounter] = useState(false);
 
   // 5. Properties
   // Not used in this file
@@ -30,14 +31,12 @@ export default function App() {
         debitis explicabo iste exercitationem magnam aut quasi. Totam cum
         mollitia repudiandae voluptatum!
       </p>
-      <Counter />
-      <AlertSystem />
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia alias
-        beatae suscipit minus voluptates? Doloribus voluptate quia assumenda
-        debitis explicabo iste exercitationem magnam aut quasi. Totam cum
-        mollitia repudiandae voluptatum!
-      </p>
+      <button onClick={() => setHideCounter(!hideCounter)}>
+        Toggle counter
+      </button>
+      {!hideCounter && <Counter name={name} />}
+      {/* Props 1/2: To pass a prop, assign it a name and a value */}
+      <AlertSystem nameState={[name, setName]} />
     </div>
   );
 }

@@ -13,7 +13,8 @@
 ## Definitions:
 
 1. **Event listener:** To act uppon an user interacting with a button, formulary, checkbox, etc.
-2. **State:** A fancy term to say to the React framework, that a piece data (variable, components, json, etc) should update the screen.
+1. **Props**: Abreviation for properties. In React is the way to pass data from parent to child.
+1. **State:** A fancy term to say to the React framework, that a piece data (variable, components, json, etc) should update the screen.
 
 ## Anatomy of the project
 

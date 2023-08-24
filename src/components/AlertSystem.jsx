@@ -1,6 +1,7 @@
-export default function AlertSystem() {
-  // Properties
-  const name = "Eduardo";
+// Props 2/2: To receive the prop do this
+export default function AlertSystem({ nameState }) {
+  const [name, setName] = nameState;
+  console.log(name);
 
   // Methods
   function showAlertBasic() {
@@ -15,15 +16,19 @@ export default function AlertSystem() {
   // Render
   return (
     <div className="alert-system">
-      {/* Show state or properties on the screen by using {} */}
-      {/* Tip: Put @@ between your {} to debug */}
-      <p>Name: @{name}@</p>
+      <h2>Alert System 🚨</h2>
+      {/* Input field: You need to pass the getter and setter. value = getter, onChange = setter */}
+      <input
+        type="text"
+        value={name}
+        onChange={(event) => setName(event.currentTarget.value)}
+      />
 
       {/* Basic event listener: for a function without parameters */}
       <button onClick={showAlertBasic}>Alert basic</button>
 
       {/* Advanced event listener advanced: for functions with one or more parameters */}
-      <button onClick={() => showAlertAdvanced("Olga")}>Alert advanced</button>
+      <button onClick={() => showAlertAdvanced(name)}>Alert advanced</button>
     </div>
   );
 }

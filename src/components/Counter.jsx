@@ -1,7 +1,7 @@
 // Node module
 import { useState } from "react";
 
-export default function Counter() {
+export default function Counter({ name }) {
   // Local state (See example in Readme.md file)
   const [count, setCount] = useState(0);
 
@@ -16,6 +16,9 @@ export default function Counter() {
   // Render
   return (
     <div className="counter">
+      <h2>Counter 🔢</h2>
+      <p>Name: @{name}@</p>
+
       {/* Show state or properties on the screen by using {} */}
       {/* Tip: Put @@ between your {} to debug */}
       <p>Counter: @{count}@</p>

@@ -1,7 +1,6 @@
 // Props 2/2: To receive the prop do this
 export default function AlertSystem({ nameState }) {
   const [name, setName] = nameState;
-  console.log(name);
 
   // Methods
   function showAlertBasic() {

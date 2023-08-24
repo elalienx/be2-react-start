@@ -15,6 +15,7 @@
 1. **Event listener:** To act uppon an user interacting with a button, formulary, checkbox, etc.
 1. **Props**: Abreviation for properties. In React is the way to pass data from parent to child.
 1. **State:** A fancy term to say to the React framework, that a piece data (variable, components, json, etc) should update the screen.
+1. **key:**: A special "props" that allow React to keep track of the dynamic components that you created. Otherwise the state will break.
 
 ## Anatomy of the project
 
@@ -34,7 +35,10 @@
 1. **Local state:** Data that needs to be updated on the browser that exist only inside a Functional Component (FC)
 1. **Properties:** Data that does not be updated on the web browser. For internal use only.
 1. **Methods:** The functions inside the Functional Component (FC). Use primarily for handling the **events** that ocurred in the render.
+1. **Components:** Components that are created dynamically inside another component. Ideal to show data that comes from an API.
 1. **Render:** The information sent to display on the web browser. Equivalent to the View mixed with Controller in the MCV design pattern.
+
+(separate file)
 
 ## Example and comparisson of State vs Java getter and seter
 

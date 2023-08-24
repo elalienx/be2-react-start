@@ -4,10 +4,10 @@
 
 1. Cleanup files by deleting stuff you don't use.
 1. Rename JavaScript files that are React components from .js to .jsx so we can visually identify them by their blue icon.
-1. Have _one function_ per .jsx file and make one line export (`export default function Component(){}`)
+1. Have **one function** per .jsx file and make one line export (`export default function Component(){}`)
 1. In React do not work with normal variables **properties** to update infomration on the screen. Utilize **state** instead.
 1. 🆕 React components should be around 50 lines of code. If you have more refactor the render into multiple sub components and extract long methods into separate Javascript files.
-1. To manipulate **state** that came from a parent component, you also need to pass the setter. Ideally a more isolate function to avoid making everything "public".
+1. 🆕To manipulate **state** that came from a parent component, you also need to pass the setter. Ideally a more isolate function to avoid making everything "public".
 
 ## Definitions:
 
@@ -33,3 +33,23 @@
 1. **Properties:** Data that does not be updated on the web browser. For internal use only.
 1. **Methods:** The functions inside the Functional Component (FC). Use primarily for handling the **events** that ocurred in the render.
 1. **Render:** The information sent to display on the web browser. Equivalent to the View mixed with Controller in the MCV design pattern.
+
+## Example and comparisson of State vs Java getter and seter
+
+### Explanation of React:
+
+`[counter, setCounter] = [getter, setter] in Java
+useState(0) = private int counter = 0 (is just that I need a specific React method called useState to initialize the state)
+(x) = the x can be a number (int), string, boolean, a componenent.`
+
+### Example in Java:
+
+`private int counter = 0
+
+public getCounter() {
+return counter
+}
+
+public setCounter(int newCounter) {
+counter = newCounter;
+}`

@@ -10,24 +10,7 @@ export default function App() {
   // No used in this project
 
   // 4. Local state
-  /**
-   * Explanation of React:
-   * [counter, setCounter] = [getter, setter] in Java
-   * useState(0) = private int counter = 0 (is just that I need a specific React method called useState to initialize the state)
-   * (x) = the x can be a number (int), string, boolean, a componenent.
-   */
-  /**
-   * Example in Java:
-   * private int counter = 0
-   *
-   * public getCounter() {
-   *    return counter
-   * }
-   *
-   * public setCounter(int newCounter) {
-   *    counter = newCounter;
-   * }
-   */
+  // See example in Readme.md file
   const [counter, setCounter] = useState(0);
 
   // 5. Properties

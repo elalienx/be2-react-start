@@ -1,5 +1,5 @@
 // 1. Node modules
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // 2. Project file
 import AlertSystem from "./components/AlertSystem";
@@ -13,13 +13,38 @@ export default function App() {
 
   // 4. Local state
   const [name, setName] = useState("Eduardo");
-  const [hideCounter, setHideCounter] = useState(false);
+  const [item, setItem] = useState({});
 
   // 5. Properties
-  // Not used in this file
+  const endpoint = "https://jsonplaceholder.typicode.com/todos/1";
 
   // 6. Methods
-  // Not used in this file
+  /**
+   * useEffect = Constructor in Java
+   *
+   * Example Java:
+   * class App{
+   *    public App() {
+   *      // code to run at creation time
+   *    }
+   * }
+   */
+  useEffect(() => {
+    fetch(endpoint)
+      .then((response) => response.json())
+      .then((result) => onSuccess(result))
+      .catch((error) => onFailure(error));
+  }, []);
+
+  function onSuccess(result) {
+    console.log(result);
+    setItem(result);
+  }
+
+  function onFailure(error) {
+    alert("Sorry we could not load the data");
+    console.error(error);
+  }
 
   // 7. Render
   return (
@@ -31,10 +56,13 @@ export default function App() {
         debitis explicabo iste exercitationem magnam aut quasi. Totam cum
         mollitia repudiandae voluptatum!
       </p>
-      <button onClick={() => setHideCounter(!hideCounter)}>
-        Toggle counter
-      </button>
-      {!hideCounter && <Counter name={name} />}
+      <ul className="item">
+        <li>Id: {item.id}</li>
+        <li>Name: {item.title}</li>
+        <li>Status: {item.completed ? "Yes" : "No"} </li>
+      </ul>
+
+      <Counter name={name} />
       {/* Props 1/2: To pass a prop, assign it a name and a value */}
       <AlertSystem nameState={[name, setName]} />
     </div>

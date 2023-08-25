@@ -1,8 +1,8 @@
-// Node module
+// Node modules
 import { useState } from "react";
 
 export default function Counter({ name, firstItem }) {
-  // Local state (See example in Readme.md file)
+  // Local state
   const [count, setCount] = useState(0);
 
   // Methods

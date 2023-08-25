@@ -20,16 +20,6 @@ export default function App() {
   const endpoint = "https://jsonplaceholder.typicode.com/todos/";
 
   // 6. Methods
-  /**
-   * useEffect = Constructor in Java
-   *
-   * Example Java:
-   * class App{
-   *    public App() {
-   *      // code to run at creation time
-   *    }
-   * }
-   */
   useEffect(() => {
     fetch(endpoint)
       .then((response) => response.json())
@@ -48,14 +38,6 @@ export default function App() {
   }
 
   // 7. Components
-  /**
-   * Example Java:
-   * private final Array<Item> items = fetchAPIData
-   *
-   * for(int i = 0; i < items.size(); i++) {
-   *    Item item = Item(item.get(i))
-   * }
-   */
   // The key is mandatory so React can keep track of the dynamically created components
   const Items = todos.map((item) => <Item key={item.id} item={item} />);
 

@@ -1,5 +1,12 @@
 # React Getting Started with Eduardo ⚛️🚀🧔🏻‍♂️
 
+Table of contents:
+
+1. [Rules](#rules)
+1. [Definitions](#definitions)
+1. [Project structure](#project-structure)
+1. [Anatomy of a React .jsx component](#anatomy-of-a-react-jsx-component)
+
 ## Rules
 
 1. Cleanup files by deleting stuff you don't use.
@@ -39,23 +46,3 @@
 1. **Render:** The User Interface (UI) sent to display on the web browser. Equivalent to the View mixed with Controller in the MCV design pattern.
 
 (separate file)
-
-## Example and comparisson of State vs Java getter and seter
-
-### Explanation of React:
-
-`[counter, setCounter] = [getter, setter] in Java
-useState(0) = private int counter = 0 (is just that I need a specific React method called useState to initialize the state)
-(x) = the x can be a number (int), string, boolean, a componenent.`
-
-### Example in Java:
-
-`private int counter = 0
-
-public getCounter() {
-return counter
-}
-
-public setCounter(int newCounter) {
-counter = newCounter;
-}`
